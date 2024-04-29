@@ -1,0 +1,16 @@
+{
+ "configurations": [
+  {
+   "type": "chrome",
+   "name": "http://127.0.0.1:3000/breakpoints.html",
+   "request": "launch",
+   "url": "http://127.0.0.1:3000/breakpoints.html"
+  },
+  {
+   "type": "chrome",
+   "name": "http://127.0.0.1:3000/display.html",
+   "request": "launch",
+   "url": "http://127.0.0.1:3000/display.html"
+  }
+ ]
+}

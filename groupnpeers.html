@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="group border-2 bg-white p-6 hover:bg-sky-500">
+    <p class="text-slate-500 group-hover:text-red-500">`group` Groups thing together from parent to child thing together from parent to child </p>
+    <p class="text-slate-500">`peer` or `peer/$name` peer element should always be before in selected element </p>
+    <p class="text-slate-500 group-hover:text-red-500">hover group</p>
+
+    <div class="flex flex-col bg-purple-500">
+      <p class="h6">flex order to make text on top, this will break the peer's rules which is "should always be after"</p>
+     <div class="order-2 peer/yellowSquare h-12 w-12 bg-yellow-500"></div>
+     <div class="order-2 peer/blackSquare h-12 w-12 bg-black"></div>
+
+     <div class="oder-1 hidden peer-hover/yellowSquare:block">Hovering on yellow squre...</div>
+     <div class="order-1 hidden peer-hover/blackSquare:block">Hovering on black squre...</div>
+
+    </div>
+  </body>
+</html>
