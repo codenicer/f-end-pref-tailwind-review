@@ -7,7 +7,7 @@ const ROUTES = ['Home', 'About', 'Services', 'Pricing', 'Contact']
 const isMobileMenuShown = signal(false)
 
 export function Nav(): JSX.Element {
- console.log('Render Navbar')
+  console.log('Render Navbar')
   return (
     <nav className="flex flex-wrap justify-between">
       <a href="#">
@@ -15,7 +15,7 @@ export function Nav(): JSX.Element {
       </a>
       <button
         onClick={() => {
-         isMobileMenuShown.value = !isMobileMenuShown.value
+          isMobileMenuShown.value = !isMobileMenuShown.value
         }}
         className="lg:hidden focus:ring-2 p-2 focus:ring-gray-200 hover:bg-gray-100 rounded-lg "
       >
