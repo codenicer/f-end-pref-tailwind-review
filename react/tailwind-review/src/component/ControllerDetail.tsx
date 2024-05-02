@@ -4,7 +4,9 @@ export function ControllerDetail(): JSX.Element {
   return (
     <div className="flex flex-col lg:flex-row-reverse space-y-4">
       <div className="flex-1">
-        <img className='w-[90vw]' src={Img1}/>
+        <div className='bg-gradient-to-br from-10% from-[#1F2C51] via-50% via-[#95E8D8] to-[#F0FE88]'>
+          <img className="w-[90vw]" src={Img1} />
+        </div>
       </div>
       <div className="flex-1 space-y-6">
         <div className="text-5xl font-black">8Bitdo SN30 Pro+</div>
