@@ -9,9 +9,9 @@ const isMobileMenuShown = signal(false)
 export function Nav(): JSX.Element {
   console.log('Render Navbar')
   return (
-    <nav className="flex flex-wrap justify-between">
+    <nav className="flex flex-wrap justify-between space-y-4 z-10 relative">
       <a href="#">
-        <Logo className="h-7 w-16 " />
+        <Logo className="h-16 w-16 " />
       </a>
       <button
         onClick={() => {
@@ -23,12 +23,12 @@ export function Nav(): JSX.Element {
       </button>
 
       <div
-        className={`${!isMobileMenuShown.value && 'hidden'} lg:block w-full lg:w-auto`}
+        className={`${!isMobileMenuShown.value && 'hidden'} lg:block w-full lg:w-auto `}
       >
-        <ul className="lg:space-x-8 flex flex-col  bg-gray-50 lg:bg-transparent text-lg rounded-lg border border-gray-100 lg:border-none p-4 lg:flex-row">
+        <ul className="lg:space-x-8 flex flex-col  bg-gray-50 lg:bg-transparent text-lg rounded-lg border border-gray-100 lg:border-none p-4 lg:flex-row mb-4">
           {ROUTES.map((route, index) => (
             <li
-              className={`cursor-pointer px-3 py-2 ${index < 1 ? 'bg-blue-500 rounded text-white lg:bg-transparent lg:text-blue-500' : 'hover:bg-gray-100'}`}
+              className={`lg:hover:text-indigo-600 lg:hover:bg-transparent cursor-pointer px-3 py-2 ${index < 1 ? 'bg-indigo-600 rounded text-white lg:bg-transparent lg:text-indigo-600' : 'hover:bg-gray-100'} ${index > 2 && 'lg:text-white '}`}
               key={index}
             >
               {route}
@@ -38,7 +38,7 @@ export function Nav(): JSX.Element {
       </div>
 
       <div className="fixed bottom-4 left-4 lg:static">
-        <div className="rounded-full bg-white shadow-md h-12 w-12 flex-center">
+        <div className="rounded-full cursor-pointer bg-white shadow-md h-12 w-12 flex-center lg:mr-8">
           <TbShoppingBag />
         </div>
       </div>

@@ -2,14 +2,14 @@ import Img1 from '../assets/8bitdo-SN30-Pro-Plus-removebg-preview.png'
 
 export function ControllerDetail(): JSX.Element {
   return (
-    <div className="flex flex-col lg:flex-row-reverse space-y-4">
-      <div className="flex-1">
-        <div className='bg-gradient-to-br from-10% from-[#1F2C51] via-50% via-[#95E8D8] to-[#F0FE88]'>
-          <img className="w-[90vw]" src={Img1} />
+    <div className="flex flex-col lg:flex-row-reverse space-y-4 mt-4">
+      <div className="flex-1 lg:-mt-[11rem]  lg:ml-[5rem]">
+        <div className='flex-center lg:h-full bg-gradient-to-br pt-14  from-10% from-[#1F2C51] via-50% via-[#95E8D8] to-[#F0FE88]'>
+          <img className="w-screen" src={Img1} />
         </div>
       </div>
       <div className="flex-1 space-y-6">
-        <div className="text-5xl font-black">8Bitdo SN30 Pro+</div>
+        <div className="text-8xl font-black">8Bitdo SN30 Pro+</div>
         <div className="font-medium md:text-xl">
           {
             'Wireless Bluetooth, rumble vibration, motion controls, USB-C. Button mapping for system-changing accuracy and modifiable vibration Adjustable Hair trigger buttons plus 6 axis motion sensor Modifiable joystick sensitivity.'
