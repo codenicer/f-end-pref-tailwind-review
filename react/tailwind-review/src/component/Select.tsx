@@ -1,3 +1,5 @@
+import { IoIosArrowDown } from "react-icons/io"
+
 export function Select({
   options,
   title,
@@ -6,12 +8,14 @@ export function Select({
   options: string[]
 }): JSX.Element {
   return (
-    <div className="p-10 lg:px-[8vw] xl:px-[10vw]  ">
-      <select>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+    <div className="relative ">
+      <select defaultValue={""} className="w-24 appearance-none border border-gray-300 p-4  rounded-sm">
+       <option value="" disabled hidden>{title}</option>
+        {options.map(option=> <option key={option}>{option}</option>)}
       </select>
+      <div className="absolute inset-y-0 right-0 flex-center pr-3">
+         <IoIosArrowDown></IoIosArrowDown>
+        </div>
     </div>
   )
 }
