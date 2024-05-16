@@ -1,4 +1,6 @@
+import { COLOR, QUANTITY } from '../_utils/constant'
 import Img1 from '../assets/8bitdo-SN30-Pro-Plus-removebg-preview.png'
+import { Select } from './Select'
 
 export function ControllerDetail(): JSX.Element {
   return (
@@ -16,6 +18,9 @@ export function ControllerDetail(): JSX.Element {
           }
         </div>
         <div className="text-3xl font-extrabold md:text-6xl">60.75$</div>
+        <Select title={"QTY"} options={QUANTITY}></Select>
+        <Select title={"COLOR"} options={COLOR}></Select>
+
         <div className="space-x-10">
           <button className="h-14 w-44 bg-black text-white hover:bg-gray-900 active:bg-gray-700">
             Add to cart
