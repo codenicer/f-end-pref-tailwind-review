@@ -6,7 +6,7 @@ export function ControllerDetail(): JSX.Element {
   return (
     <div className="flex flex-col lg:flex-row-reverse space-y-4 mt-4">
       <div className="flex-1 lg:-mt-[11rem]  lg:ml-[5rem]">
-        <div className="flex-center lg:h-full bg-gradient-to-br pt-14  from-10% from-[#1F2C51] via-50% via-[#95E8D8] to-[#F0FE88]">
+        <div className="flex-center animate-wiggle lg:h-full bg-gradient-to-br pt-14  from-10% from-[#1F2C51] via-50% via-[#95E8D8] to-[#F0FE88]">
           <img className="w-screen" src={Img1} />
         </div>
       </div>
