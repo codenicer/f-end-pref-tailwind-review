@@ -38,7 +38,7 @@ export function Nav(): JSX.Element {
       </div>
 
       <div className="fixed bottom-4 left-4 lg:static">
-        <div className="rounded-full cursor-pointer bg-white shadow-md h-12 w-12 flex-center lg:mr-8">
+        <div className="rounded-full cursor-pointer bg-white shadow-md h-12 w-12 flex-center lg:mr-8 btn-press-anim">
           <TbShoppingBag />
         </div>
       </div>
