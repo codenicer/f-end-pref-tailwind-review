@@ -1,5 +1,5 @@
 import { COLOR, QUANTITY } from '../_utils/constant'
-import Img1 from '../assets/8bitdo-SN30-Pro-Plus-removebg-preview.png'
+import Img1 from '../assets/pro-2.png'
 import { Select } from './Select'
 
 export function ControllerDetail(): JSX.Element {
