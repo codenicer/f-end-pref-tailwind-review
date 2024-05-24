@@ -58,7 +58,7 @@ export const CONTROLLERS: Controller[] = [
     _id: 5,
     src: ultimateC,
     className: 'bg-[#2F3816]',
-    title: '8bitdo Ultimate C Wires',
+    title: '8bitdo Ultimate C',
     description:
       'The 8BitDo Ultimate C Wired Controller was designed with respect for the classics. We paid extra attention to the most critical characteristics like the D-pad, to make sure it feels exactly like you remember it.',
     price: 29.99,
