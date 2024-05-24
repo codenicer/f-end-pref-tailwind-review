@@ -8,14 +8,16 @@ import zero2 from '../assets/zero2-bluetooth.png'
 export const QUANTITY = ['1', '2', '3', '4', '5']
 export const COLOR = ['BLACK', 'WHITE', 'BLACK/WHITE', 'PURPLE']
 
-export const CONTROLLERS: {
+export interface Controller {
   _id: number
   src: string
   className: string
   title: string
   description: string
   price: number
-}[] = [
+}
+
+export const CONTROLLERS: Controller[] = [
   {
     _id: 1,
     src: lite2Bluetooth,
