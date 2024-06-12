@@ -1,4 +1,5 @@
 import { CONTROLLERS } from './_utils/constant'
+import { CartItem } from './component/CartItem'
 import { ControllerDetail } from './component/ControllerDetail'
 import { ControllerList } from './component/ControllerList'
 import { Nav } from './component/Nav'
@@ -10,7 +11,14 @@ export function App(): JSX.Element {
       <Nav />
       <ControllerDetail />
       <ControllerList controllers={CONTROLLERS} />
-      <SideBar><p>{' HI THIS IS SIDEBAR'}</p></SideBar>
+      <SideBar>
+        <>
+          <h2 className="text-2xl font-bold mb-10">CART</h2>
+          {CONTROLLERS.map((c) => (
+            <CartItem controller={c} />
+          ))}
+        </>
+      </SideBar>
     </div>
   )
 }

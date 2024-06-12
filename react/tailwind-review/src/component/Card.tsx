@@ -9,7 +9,7 @@ export function Card({ controller }: { controller: Controller }): JSX.Element {
         <div className="text-2xl font-bold">{controller.title}</div>
         <div className='underline underline-offset-4 font-semibold mt-8'> SHOP NOW +</div>
       </div>
-      <img  src={controller.src} className="h-60 max-w-[20rem] absolute top-[-1rem] left-[50%]" />
+      <img  src={controller.src} className="h-60 max-w-[18rem] absolute top-[-1rem] left-[50%]" />
     </div>
   )
 }
