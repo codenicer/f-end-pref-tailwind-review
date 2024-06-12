@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { signal } from '@preact/signals-react'
 import Logo from '../assets/8bit-logo.svg?react'
 import { RxHamburgerMenu } from 'react-icons/rx'
@@ -5,6 +6,7 @@ import { TbShoppingBag } from 'react-icons/tb'
 
 const ROUTES = ['Home', 'About', 'Services', 'Pricing', 'Contact']
 const isMobileMenuShown = signal(false)
+export const isCartOpen = signal(false)
 
 export function Nav(): JSX.Element {
   console.log('Render Navbar')
@@ -37,7 +39,11 @@ export function Nav(): JSX.Element {
         </ul>
       </div>
 
-      <div className="fixed bottom-4 left-4 lg:static">
+      <div className="fixed bottom-4 left-4 lg:static"
+       onClick={()=> {
+        isCartOpen.value = true
+       }}
+      >
         <div className="rounded-full cursor-pointer bg-white shadow-md h-12 w-12 flex-center lg:mr-8 btn-press-anim">
           <TbShoppingBag />
         </div>

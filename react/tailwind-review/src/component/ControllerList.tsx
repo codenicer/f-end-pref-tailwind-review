@@ -1,4 +1,4 @@
-import { CONTROLLERS, Controller } from '../_utils/constant'
+import { Controller } from '../_utils/constant'
 import { Card } from './Card'
 
 export function ControllerList({
@@ -16,7 +16,7 @@ export function ControllerList({
         </div>
       </div>
       <div className=' mt-10 grid grid-cols-1 gap-y-24 justify-between md:grid-cols-2 md:gap-x-4 xl:grid-cols-3 xl:gap-x-10'>
-        {CONTROLLERS.map((c) => (
+        {controllers.map((c) => (
           <Card controller={c} />
         ))}
       </div>
