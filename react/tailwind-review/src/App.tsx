@@ -9,8 +9,8 @@ export function App(): JSX.Element {
     <div className="p-10 lg:px-[8vw] xl:px-[10vw]  animate-fadeIn">
       <Nav />
       <ControllerDetail />
-      <ControllerList controllers={CONTROLLERS}/>
-      <SideBar/>
+      <ControllerList controllers={CONTROLLERS} />
+      <SideBar><p>{' HI THIS IS SIDEBAR'}</p></SideBar>
     </div>
   )
 }
