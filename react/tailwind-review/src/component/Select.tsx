@@ -3,15 +3,17 @@ import { IoIosArrowDown } from 'react-icons/io'
 export function Select({
   options,
   title,
+  className,
 }: {
   title?: string
   options: string[]
+  className?: string
 }): JSX.Element {
   return (
     <div className="relative ">
       <select
         defaultValue={''}
-        className="w-25 appearance-none border border-gray-300 p-4  rounded-sm"
+        className={`w-25 appearance-none border border-gray-300 p-4  rounded-sm ${className}`}
       >
         {title && (
           <option value="" disabled hidden>

@@ -23,11 +23,11 @@ export function CartItem({
         <div className="flex space-x-6">
           <div>
             <div>{'QTY'}</div>
-            <Select  options={QUANTITY}></Select>
+            <Select options={QUANTITY} className='w-16 p-1'></Select>
           </div>
           <div>
             <div>{'COLOR'}</div>
-            <Select options={COLOR}></Select>
+            <Select options={COLOR} className='w-16 p-1'></Select>
           </div>
           <button>
             <CiTrash size={25} className="text-black" />
