@@ -5,15 +5,17 @@ export function Select({
   options,
   title,
   className,
+  defaultValue
 }: {
-  title?: string
   options: string[]
+  defaultValue?: string
+  title?: string
   className?: string
 }): JSX.Element {
   return (
     <div className="relative ">
       <select
-        defaultValue={''}
+        defaultValue={defaultValue || ''}
         className={twMerge(`w-25 appearance-none border border-gray-300 p-4  rounded-sm ${className}`)}
       >
         {title && (

@@ -7,7 +7,8 @@ import zero2 from '../assets/zero2-bluetooth.png'
 
 export const QUANTITY = ['1', '2', '3', '4', '5']
 export const COLOR = ['BLACK', 'WHITE', 'BLACK/WHITE', 'PURPLE']
-
+export type Color = (typeof COLOR)[number]
+export type Quantity = (typeof QUANTITY)[number]
 export interface Controller {
   _id: number
   src: string
@@ -15,6 +16,12 @@ export interface Controller {
   title: string
   description: string
   price: number
+}
+
+export interface FakeCartItem {
+  controller: Controller
+  qty: Quantity
+  color: Color
 }
 
 export const CONTROLLERS: Controller[] = [
@@ -73,3 +80,13 @@ export const CONTROLLERS: Controller[] = [
     price: 39.5,
   },
 ]
+
+export const FAKE_CART_ITEMS: FakeCartItem[] = CONTROLLERS.map(
+  (controller, index): FakeCartItem => {
+    return {
+      controller,
+      qty: String(index),
+      color: COLOR[index - 1],
+    }
+  }
+)
