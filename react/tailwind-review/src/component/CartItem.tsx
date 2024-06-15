@@ -28,8 +28,8 @@ export function CartItem({
             <div className='font-bold dark:text-white'>{'COLOR'}</div>
             <Select defaultValue={cartItem.color} options={COLOR} className="w-auto p-1 "></Select>
           </div>
-          <button>
-            <CiTrash size={25} className="text-black dark:text-white" />
+          <button className='flex-center pt-[1.5rem]'>
+            <CiTrash size={30} className="text-black dark:text-white" />
           </button>
         </div>
       </div>
