@@ -9,7 +9,7 @@ export function Cart({
  console.log(cartItems)
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-10">CART</h2>
+      <h2 className="dark:text-white text-2xl font-bold mb-10">CART</h2>
       <ul className="space-y-5">
         {cartItems.map((cartItem, index) => (
           <li key={index}>

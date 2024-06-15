@@ -9,17 +9,16 @@ const isMobileMenuShown = signal(false)
 export const isCartOpen = signal(false)
 
 export function Nav(): JSX.Element {
-  console.log('Render Navbar')
   return (
     <nav className="flex flex-wrap justify-between space-y-4 z-10 relative">
       <a href="#">
-        <Logo className="h-16 w-16 " />
+        <Logo className="h-16 w-16  dark:fill-white" />
       </a>
       <button
         onClick={() => {
           isMobileMenuShown.value = !isMobileMenuShown.value
         }}
-        className="lg:hidden focus:ring-2 p-2 focus:ring-gray-200 hover:bg-gray-100 rounded-lg "
+        className="dark:text-gray-400 dark:hover:bg-gray-700 lg:hidden focus:ring-2 p-2 focus:ring-gray-200 hover:bg-gray-100 rounded-lg "
       >
         <RxHamburgerMenu size={25} />
       </button>
@@ -27,7 +26,7 @@ export function Nav(): JSX.Element {
       <div
         className={`${!isMobileMenuShown.value && 'hidden'} lg:block w-full lg:w-auto `}
       >
-        <ul className="lg:space-x-8 flex flex-col  bg-gray-50 lg:bg-transparent text-lg rounded-lg border border-gray-100 lg:border-none p-4 lg:flex-row mb-4">
+        <ul className="lg:space-x-8 flex flex-col  bg-gray-50 lg:bg-transparent text-lg rounded-lg border border-gray-100 lg:border-none p-4 lg:flex-row mb-4 lg:dark:text-white">
           {ROUTES.map((route, index) => (
             <li
               className={`lg:hover:text-indigo-600 lg:hover:bg-transparent cursor-pointer px-3 py-2 ${index < 1 ? 'bg-indigo-600 rounded text-white lg:bg-transparent lg:text-indigo-600' : 'hover:bg-gray-100'} ${index > 2 && 'lg:text-white '}`}
@@ -39,10 +38,11 @@ export function Nav(): JSX.Element {
         </ul>
       </div>
 
-      <div className="fixed bottom-4 left-4 lg:static"
-       onClick={()=> {
-        isCartOpen.value = true
-       }}
+      <div
+        className="fixed bottom-4 left-4 lg:static"
+        onClick={() => {
+          isCartOpen.value = true
+        }}
       >
         <div className="rounded-full cursor-pointer bg-white shadow-md h-12 w-12 flex-center lg:mr-8 btn-press-anim">
           <TbShoppingBag />

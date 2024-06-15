@@ -10,7 +10,7 @@ export function ControllerList({
     <div className="mt-20">
       <div className="flex-center ">
         <div
-          className={`bg-[url("./assets/9282938.png")] bg-cover px-14 py-6 bg-center text-4xl font-extrabold`}
+          className={`dark:text-white bg-[url("./assets/9282938.png")] bg-cover px-14 py-6 bg-center text-4xl font-extrabold`}
         >
           OTHERS
         </div>

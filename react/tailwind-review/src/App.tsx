@@ -26,7 +26,7 @@ export function App(): JSX.Element {
   }
 
   return (
-    <div className="p-10 lg:px-[8vw] xl:px-[10vw]  animate-fadeIn">
+    <div className="p-10 lg:px-[8vw] xl:px-[10vw] animate-fadeIn dark:bg-night">
       <Nav />
       <ControllerDetail />
       <ControllerList controllers={CONTROLLERS} />

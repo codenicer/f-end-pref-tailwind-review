@@ -13,7 +13,7 @@ export function Select({
   className?: string
 }): JSX.Element {
   return (
-    <div className="relative ">
+    <div className="relative  dark:text-black ">
       <select
         defaultValue={defaultValue || ''}
         className={twMerge(`w-25 appearance-none border border-gray-300 p-4  rounded-sm ${className}`)}
